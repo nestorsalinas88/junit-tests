@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Kitchen {
 
-    String[] tortillas;
+    private String[] tortillas;
 
     public Kitchen(){
         this.tortillas = new String[0];
@@ -36,6 +36,10 @@ public class Kitchen {
         for (int i = tortillas.length-1; i >= 0; i--){
             System.out.println("tortillas["+i+"] " + tortillas[i]);
         }
+    }
+
+    public int size(){
+        return tortillas.length;
     }
 
 }

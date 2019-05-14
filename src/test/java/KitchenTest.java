@@ -32,11 +32,11 @@ public class KitchenTest {
 
     @Test
     public void testSize(){
-        assertSame(0, emptyKitchen.tortillas.length);
-        assertSame(1, kitchenWithOne.tortillas.length);
+        assertSame(0, emptyKitchen.size());
+        assertSame(1, kitchenWithOne.size());
         // Testing sizes is tricky set boundaries is always a good idea
         // test 0, 1 and many (!2)
-        assertSame(4, kitchenWithMany.tortillas.length);
+        assertSame(4, kitchenWithMany.size());
     }
 
     @Test
@@ -46,6 +46,6 @@ public class KitchenTest {
         kitchen.add("white corn");
         assertFalse(kitchen.isEmpty());
         assertTrue(kitchen.contains("white corn"));
-        assertSame(1, kitchen.tortillas.length);
+        assertSame(1, kitchen.size());
     }
 }
