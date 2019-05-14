@@ -38,4 +38,14 @@ public class KitchenTest {
         // test 0, 1 and many (!2)
         assertSame(4, kitchenWithMany.tortillas.length);
     }
+
+    @Test
+    public void testAdd(){
+        Kitchen kitchen = new Kitchen();
+        assertTrue(kitchen.isEmpty());
+        kitchen.add("white corn");
+        assertFalse(kitchen.isEmpty());
+        assertTrue(kitchen.contains("white corn"));
+        assertSame(1, kitchen.tortillas.length);
+    }
 }
