@@ -57,4 +57,14 @@ public class KitchenTest {
         assertSame(0, kitchenWithOne.size());
     }
 
+    @Test
+    public void testContains(){
+        kitchenWithOne.pop();
+        assertTrue(kitchenWithOne.isEmpty());
+        assertFalse(kitchenWithOne.contains("white corn"));
+        assertSame(0, kitchenWithOne.size());
+        assertSame(4, kitchenWithMany.size());
+
+    }
+
 }
